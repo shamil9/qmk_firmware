@@ -70,6 +70,7 @@ NKRO_ENABLE = yes	    # USB Nkey Rollover
 CUSTOM_MATRIX = yes # Custom matrix file
 BACKLIGHT_ENABLE = yes
 VISUALIZER_ENABLE = yes
+TAP_DANCE_ENABLE = yes
 
 LED_DRIVER = is31fl3731c
 LED_WIDTH = 16
