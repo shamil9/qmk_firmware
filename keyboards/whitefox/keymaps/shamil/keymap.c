@@ -103,6 +103,7 @@ const uint16_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |Ctrl|Gui |Alt |         Space    |Fn0 |Alt |Gui |  |Lef|Dow|Rig|
      * `---------------------------------------------------------------'
      */
+
     [0] = LAYOUT( \
         KC_ESC,  KC_1,    KC_2,    KC_3, KC_4, KC_5, TD(ALT_SIX), KC_7, KC_8, KC_9,      KC_0,    KC_MINS,   KC_EQL,  KC_BSLS, TD(ALT_GRAVE), KC_DEL, \
         KC_TAB,  KC_Q,    KC_W,    KC_E, KC_R, KC_T, KC_Y,        KC_U, KC_I, KC_O,      KC_P,    KC_LBRC,   KC_RBRC, KC_BSPC,                KC_PGUP, \
