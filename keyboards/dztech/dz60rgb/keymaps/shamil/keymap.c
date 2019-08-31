@@ -7,9 +7,9 @@
 
 //Tap Dance Declarations
 enum {
-  ALT_SIX = 1,
-  GAMING = 2,
-  DEFAULT = 3,
+  ALT_SIX,
+  GAMING,
+  DEFAULT,
 };
 
 enum custom_keycodes {
@@ -34,35 +34,35 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		[_LAYER0] = LAYOUT_ANSI( /* Base */
-			KC_GRAVE,       KC_1,    KC_2,    KC_3,    KC_4,  KC_5,   KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,   KC_BSPC,\
-		    KC_TAB,         KC_Q,    KC_W,    KC_E,    KC_R,  KC_T,   KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC,  KC_BSLASH,\
-			CTL_T(KC_ESC),  KC_A,    KC_S,    KC_D,    KC_F,  KC_G,   KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,           KC_ENT,\
-		    KC_LSFT,        KC_Z,    KC_X,    KC_C,    KC_V,  KC_B,   KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,\
-		    KC_HYPR,        KC_LALT, KC_LGUI,                 LT(1, KC_SPACE),                   OSL(1),  KC_RALT, MO(2),             TD(GAMING)),
+			KC_GRAVE,       KC_1,    KC_2,    KC_3,    KC_4,  KC_5,   TD(ALT_SIX), KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,   KC_BSPC,\
+		    KC_TAB,         KC_Q,    KC_W,    KC_E,    KC_R,  KC_T,   KC_Y,        KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC,  KC_BSLASH,\
+			CTL_T(KC_ESC),  KC_A,    KC_S,    KC_D,    KC_F,  KC_G,   KC_H,        KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,           KC_ENT,\
+		    KC_LSFT,        KC_Z,    KC_X,    KC_C,    KC_V,  KC_B,   KC_N,        KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,\
+		    KC_HYPR,        KC_LALT, KC_LGUI,                 LT(1, KC_SPACE),                       OSL(1),  KC_RALT, MO(2),             TD(GAMING)),
 		[_LAYER1] = LAYOUT_ANSI( /* FN */
-			KC_NO,          KC_F1,   KC_F2,   KC_F3,   KC_F4, KC_F5,  KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,   KC_DEL,\
-			KC_NO,          KC_NO,   KC_NO,   EONE,    ETWO,  KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_MPRV, KC_MNXT,  KC_MUTE,\
-			KC_NO,          ATWO,    AONE,    KC_BSPC, KC_NO, KC_NO,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_NO,   KC_NO,             RESET,\
-			KC_NO,          KC_NO,   KC_NO,   KC_NO,   CONE,  KC_NO,  KC_NO,   KC_NO,   LARW,    RARW,    RARWF,   KC_NO,\
-			KC_NO,          KC_NO,   KC_NO,                   KC_NO,                             KC_NO,   KC_NO,   KC_NO,             KC_NO),
+			KC_NO,          KC_F1,   KC_F2,   KC_F3,   KC_F4, KC_F5,  KC_F6,       KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,   KC_DEL,\
+			KC_NO,          KC_NO,   KC_NO,   EONE,    ETWO,  KC_NO,  KC_NO,       KC_NO,   KC_NO,   KC_NO,   KC_MPLY, KC_MPRV, KC_MNXT,  KC_MUTE,\
+			KC_NO,          ATWO,    AONE,    KC_BSPC, KC_NO, KC_NO,  KC_LEFT,     KC_DOWN, KC_UP,   KC_RGHT, KC_NO,   KC_NO,             RESET,\
+			KC_NO,          KC_NO,   KC_NO,   CONE,    KC_NO, KC_NO,  KC_NO,       KC_NO,   LARW,    RARW,    RARWF,   KC_NO,\
+			KC_NO,          KC_NO,   KC_NO,                   KC_NO,                                 KC_NO,   KC_NO,   KC_NO,             KC_NO),
 		[_LAYER2] = LAYOUT_ANSI( /* FN2 */
-			KC_NO,          KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   RGB_SPD,  RGB_SPI, KC_NO,\
-			RGB_TOG,        RGB_HUI, RGB_HUD, KC_NO,   KC_NO,  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   RGB_RMOD, RGB_MOD, KC_NO,\
-			KC_NO,          RGB_SAI, RGB_SAD, KC_NO,   KC_NO,  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,             KC_NO,\
-			KC_NO,          RGB_VAI, RGB_VAD, KC_NO,   KC_NO,  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,\
-			KC_NO,          KC_NO,   KC_NO,                    KC_NO,                            KC_NO,   KC_NO,   KC_NO,             KC_NO),
+			KC_NO,          KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO, KC_NO,       KC_NO,   KC_NO,   KC_NO,   KC_NO,   RGB_SPD,  RGB_SPI, KC_NO,\
+			RGB_TOG,        RGB_HUI, RGB_HUD, KC_NO,   KC_NO,  KC_NO, KC_NO,       KC_NO,   KC_NO,   KC_NO,   KC_NO,   RGB_RMOD, RGB_MOD, KC_NO,\
+			KC_NO,          RGB_SAI, RGB_SAD, KC_NO,   KC_NO,  KC_NO, KC_NO,       KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,             KC_NO,\
+			KC_NO,          RGB_VAI, RGB_VAD, KC_NO,   KC_NO,  KC_NO, KC_NO,       KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,\
+			KC_NO,          KC_NO,   KC_NO,                    KC_NO,                                KC_NO,   KC_NO,   KC_NO,             KC_NO),
 		[_LAYER3] = LAYOUT_ANSI( /* FN3 */
-			KC_GESC,        KC_1,    KC_2,    KC_3,    KC_4,   KC_5,  KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS,  KC_EQL,  KC_BSPC,\
-			KC_TAB,         KC_Q,    KC_W,    KC_E,    KC_R,   KC_T,  KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC,  KC_RBRC, KC_BSLASH,\
-			CTL_T(KC_ESC),  KC_A,    KC_S,    KC_D,    KC_F,   KC_G,  KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,           KC_ENT,\
-			KC_LSFT,        KC_Z,    KC_X,    KC_C,    KC_V,   KC_B,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,\
-			KC_HYPR,        KC_LGUI, KC_LALT,                  KC_SPC,                           MO(4),   KC_NO,   KC_NO,             TD(DEFAULT)),
+			KC_GESC,        KC_1,    KC_2,    KC_3,    KC_4,   KC_5,  KC_6,        KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS,  KC_EQL,  KC_BSPC,\
+			KC_TAB,         KC_Q,    KC_W,    KC_E,    KC_R,   KC_T,  KC_Y,        KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC,  KC_RBRC, KC_BSLASH,\
+			CTL_T(KC_ESC),  KC_A,    KC_S,    KC_D,    KC_F,   KC_G,  KC_H,        KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,           KC_ENT,\
+			KC_LSFT,        KC_Z,    KC_X,    KC_C,    KC_V,   KC_B,  KC_N,        KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,\
+			KC_HYPR,        KC_LGUI, KC_LALT,                  KC_SPC,                               MO(4),   KC_NO,   KC_NO,             TD(DEFAULT)),
 		[_LAYER4] = LAYOUT_ANSI( /* FN4 */
-			KC_NO,          KC_F1,   KC_F2,   KC_F3,   KC_F4,  KC_F5, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,   KC_F12,  KC_DEL,\
-			KC_NO,          KC_NO,   KC_UP,   KC_NO,   KC_NO,  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_MPRV,  KC_MNXT, KC_MUTE,\
-			KC_NO,          KC_LEFT, KC_DOWN, KC_RGHT, KC_NO,  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,             KC_NO,\
-			KC_NO,          KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,\
-			KC_NO,          KC_NO,   KC_NO,                    KC_NO,                            KC_NO,   KC_NO,   KC_NO,             KC_NO),
+			KC_NO,          KC_F1,   KC_F2,   KC_F3,   KC_F4,  KC_F5, KC_F6,       KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,   KC_F12,  KC_DEL,\
+			KC_NO,          KC_NO,   KC_UP,   KC_NO,   KC_NO,  KC_NO, KC_NO,       KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_MPRV,  KC_MNXT, KC_MUTE,\
+			KC_NO,          KC_LEFT, KC_DOWN, KC_RGHT, KC_NO,  KC_NO, KC_NO,       KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,             KC_NO,\
+			KC_NO,          KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO, KC_NO,       KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,\
+			KC_NO,          KC_NO,   KC_NO,                    KC_NO,                                KC_NO,   KC_NO,   KC_NO,             KC_NO),
 		};
 
 void rgb_matrix_layer_helper (uint8_t red, uint8_t green, uint8_t blue, bool default_layer) {
