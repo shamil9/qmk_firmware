@@ -95,6 +95,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case CONE:
           SEND_STRING(SS_LALT("c")"c");
           break;
+
+        case UONE:
+          SEND_STRING(SS_LALT("e")"u");
+          break;
     }
   }
 
