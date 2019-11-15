@@ -39,11 +39,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_HYPR,          KC_LALT,    KC_LGUI,                LT(1, KC_SPACE),                       OSL(1),      KC_HYPR,                            KC_LEFT,    KC_DOWN,    KC_RIGHT),
 
   [1] = LAYOUT(
-      KC_NO,            KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,      KC_F6,          KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,     KC_F12,     KC_NO,      KC_DEL,   \
-      KC_NO,            KC_NO,      KC_NO,      EONE,       ETWO,       KC_NO,      KC_NO,          UONE,       UTWO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,   \
-      KC_NO,            ATWO,       AONE,       KC_BSPC,    KC_NO,      KC_NO,      KC_LEFT,        KC_DOWN,    KC_UP,      KC_RGHT,    KC_NO,      KC_NO,      KC_NO,                  KC_NO,   \
-      KC_NO,            KC_NO,      KC_NO,      CONE,       KC_NO,      KC_NO,      KC_NO,          KC_NO,      LARW,       RARW,       RARWF,      KC_VOLU,    KC_NO,                  RESET,    \
-      KC_NO,            KC_NO,      KC_NO,                  KC_NO,                                  KC_NO,      KC_NO,                              KC_MPRV,    KC_VOLD,    KC_MNXT),
+      KC_TRNS,          KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,      KC_F6,          KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,     KC_F12,     KC_TRNS,      KC_DEL,   \
+      KC_TRNS,          KC_TRNS,    KC_TRNS,    EONE,       ETWO,       KC_TRNS,    KC_TRNS,        UONE,       UTWO,       KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,      KC_TRNS,   \
+      KC_TRNS,          ATWO,       AONE,       KC_BSPC,    KC_TRNS,    KC_TRNS,    KC_LEFT,        KC_DOWN,    KC_UP,      KC_RGHT,    KC_TRNS,    KC_TRNS,    KC_TRNS,                  KC_TRNS,   \
+      KC_TRNS,          KC_TRNS,    KC_TRNS,    CONE,       KC_TRNS,    KC_TRNS,    KC_TRNS,        KC_TRNS,    LARW,       RARW,       RARWF,      KC_VOLU,    KC_VOLU,                  RESET,    \
+      KC_TRNS,          KC_TRNS,    KC_TRNS,                KC_TRNS,                                KC_TRNS,    KC_TRNS,                            KC_MPRV,    KC_VOLD,    KC_MNXT),
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
