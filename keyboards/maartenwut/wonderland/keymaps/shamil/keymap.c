@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         RGB_TOG,    KC_TRNS,        KC_F1,      KC_F2,      KC_F3,     KC_F4,     KC_F5,      KC_F6,   KC_F7,      KC_F8,      KC_F9,     KC_F10,     KC_F11,     KC_F12,   RGB_HUI, RGB_HUD, \
         RGB_MOD,    KC_TRNS,        KC_TRNS,    KC_TRNS,    EONE,      ETWO,      ETHREE,     KC_TRNS, UONE,       UTWO,       KC_TRNS,   KC_TRNS,    KC_MPRV,    KC_MNXT,  KC_MUTE, \
         RGB_RMOD,   KC_TRNS,        ATWO,       AONE,       KC_BSPC,   KC_TRNS,   KC_TRNS,    KC_LEFT, KC_DOWN,    KC_UP,      KC_RGHT,   KC_TRNS,    KC_TRNS,    KC_TRNS, \
-                    KC_LSFT,        KC_TRNS,    KC_TRNS,    CONE,      RGB_SAD,   RGB_VAI,    RGB_VAD, KC_TRNS,    KC_TRNS,    LARW,      RARW,       RARWF,      KC_TRNS,  RESET, \
+                    KC_LSFT,        KC_TRNS,    KC_TRNS,    CONE,      RGB_SAD,   RGB_SAI,    RGB_VAI, RGB_VAD,    KC_TRNS,    LARW,      RARW,       RARWF,      KC_TRNS,  RESET, \
                     KC_TRNS,        KC_LALT,    KC_TRNS,    KC_TRNS,              KC_TRNS,    KC_RALT,                                                     KC_TRNS \
     ),
 
@@ -61,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         RGB_TOG,    KC_TRNS,        KC_F1,      KC_F2,      KC_F3,     KC_F4,     KC_F5,      KC_F6,   KC_F7,      KC_F8,      KC_F9,     KC_F10,     KC_F11,     KC_F12,   RGB_HUI, RGB_HUD, \
         RGB_MOD,    KC_TRNS,        KC_TRNS,    KC_UP,      EONE,      ETWO,      ETHREE,     KC_TRNS, UONE,       UTWO,       KC_TRNS,   KC_TRNS,    KC_MPRV,    KC_MNXT,  KC_MUTE, \
         RGB_RMOD,   KC_LEFT,        KC_LEFT,    KC_DOWN,    KC_RGHT,   KC_TRNS,   KC_TRNS,    KC_LEFT, KC_DOWN,    KC_UP,      KC_RGHT,   KC_TRNS,    KC_TRNS,    KC_TRNS, \
-                    KC_LSFT,        KC_TRNS,    KC_TRNS,    CONE,      RGB_SAD,   RGB_VAI,    RGB_VAD, KC_TRNS,    KC_TRNS,    LARW,      RARW,       RARWF,      KC_TRNS,  RESET, \
+                    KC_LSFT,        KC_TRNS,    KC_TRNS,    CONE,      RGB_SAD,   RGB_SAI,    RGB_VAI, RGB_VAD,    KC_TRNS,    LARW,      RARW,       RARWF,      KC_TRNS,  RESET, \
                     KC_TRNS,        KC_LALT,    KC_TRNS,    KC_TRNS,              KC_TRNS,    KC_RALT,                                                     KC_TRNS \
     ),
 };
