@@ -96,7 +96,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           break;
 
         case ETHREE:
-          SEND_STRING(SS_LALT("^")"e");
+          SEND_STRING(SS_LALT("6")"e");
           break;
 
         case AONE:
