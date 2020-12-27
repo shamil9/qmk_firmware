@@ -7,6 +7,7 @@ enum custom_keycodes {
   RARWF,
   EONE,
   ETWO,
+  ETHREE,
   AONE,
   ATWO,
   UONE,
@@ -44,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Fn1 Layer
 [1] = LAYOUT_60_hhkb(
     KC_GRAVE,      KC_F1,    KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,          KC_F7,   KC_F8,   KC_F9,    KC_F10,  KC_F11,  KC_F12,  KC_BSLS, KC_GRAVE,
-    KC_TRNS,       KC_TRNS,  KC_TRNS, EONE,    ETWO,    KC_T,    KC_Y,           UONE,    UTWO,    KC_O,     KC_P,    KC_MPRV, KC_MNXT, KC_DEL,
+    KC_TRNS,       KC_TRNS,  KC_TRNS, EONE,    ETWO,    ETHREE,  KC_Y,           UONE,    UTWO,    KC_O,     KC_P,    KC_MPRV, KC_MNXT, KC_DEL,
     KC_LCTRL,      ATWO,     AONE,    KC_BSPC, KC_F,    KC_G,    KC_LEFT,        KC_DOWN, KC_UP,   KC_RIGHT, KC_SCLN, KC_QUOT, KC_ENT,
     KC_LSFT,       KC_Z,     KC_X,    CONE,    KC_V,    KC_B,    KC_N,           KC_M,    LARW,    RARW,     RARWF,   KC_RSFT, RESET,
                    KC_LALT,  KC_LGUI,                            KC_TRNS,                  OSL(1),   KC_RGUI
@@ -98,6 +99,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         case ETWO:
           SEND_STRING(SS_LALT("`")"e");
+          break;
+
+        case ETHREE:
+          SEND_STRING(SS_LALT("6")"e");
           break;
 
         case AONE:
