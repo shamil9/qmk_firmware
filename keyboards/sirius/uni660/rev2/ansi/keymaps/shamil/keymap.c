@@ -9,7 +9,8 @@ enum custom_keycodes {
   AONE,
   ATWO,
   UONE,
-  UTWO,
+  IONE,
+  OONE,
   CONE,
 };
 
@@ -36,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [1] = LAYOUT_ansi( /* Base */
         KC_F1,   KC_ESC,  KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_BSPC, KC_DEL, KC_GRV,
-        KC_F2,    KC_TAB,  KC_Q, KC_W, EONE, ETWO, ETHREE, KC_Y, UONE, UTWO, KC_O, KC_P, KC_LBRC, KC_RBRC, KC_BSLS, KC_DEL,
+        KC_F2,    KC_TAB,  KC_Q, KC_W, EONE, ETWO, ETHREE, KC_Y, UONE, IONE, OONE, KC_P, KC_LBRC, KC_RBRC, KC_BSLS, KC_DEL,
         KC_F3,    KC_LCTL, ATWO,    AONE, KC_BSPC, KC_F, KC_G, KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, KC_SCLN, KC_QUOT, KC_ENT,
         KC_F4,    KC_LSFT, KC_Z, KC_X, CONE, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, KC_UP,
         KC_F5,    KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, KC_DEL, KC_SPC, KC_RALT, KC_RGUI, KC_RCTL, KC_MPRV, KC_DOWN, KC_MNXT
@@ -101,8 +102,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           SEND_STRING(SS_LALT("`")"u");
           break;
 
-        case UTWO:
-          SEND_STRING(SS_LALT("e")"u");
+        case IONE:
+          SEND_STRING(SS_LALT("6")"i");
+          break;
+
+        case OONE:
+          SEND_STRING(SS_LALT("6")"o");
           break;
     }
   }
