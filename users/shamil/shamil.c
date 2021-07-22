@@ -1,6 +1,5 @@
 #include "shamil.h"
 
-// French chars
 enum unicode_names {
   E_AIG,
   E_AIG_MAJ,
@@ -89,3 +88,42 @@ const uint32_t PROGMEM unicode_map[] = {
   [INFINIT] = 0x221E,  // 40 ∞
 };
 
+uint16_t gui_timer = 0;
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+      case KC_LSFT:
+        if (record->event.pressed) {
+            register_mods(MOD_BIT(KC_LSFT));
+            gui_timer = timer_read();
+        } else {
+            if (timer_elapsed (gui_timer) > TAPPING_TERM) {
+                unregister_mods(MOD_BIT(KC_LSFT));
+            } else {
+                register_code(keycode);
+                unregister_code(keycode);
+                unregister_mods(MOD_BIT(KC_LSFT));
+                layer_on(1);
+                set_oneshot_layer(1, ONESHOT_START);
+                clear_oneshot_layer_state(ONESHOT_PRESSED);
+            }
+        }
+
+        break;
+
+        if (record->event.pressed) {
+            case RARW:
+              SEND_STRING("->");
+              break;
+
+            case RARWF:
+               SEND_STRING("=>");
+
+            case LARW:
+                SEND_STRING("<-");
+                break;
+        }
+    }
+
+    return true;
+};
