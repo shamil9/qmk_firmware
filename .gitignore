@@ -23,7 +23,6 @@ quantum/version.h
 !quantum/tools/eeprom_reset.hex
 *.bin
 *.eep
-*.hex
 *.qmk
 *.uf2
 
