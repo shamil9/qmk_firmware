@@ -15,8 +15,8 @@ enum unicode_names {
   A_GRV_MAJ,
   C_CEDILLE,
   C_CEDILLE_MAJ,
-  CARRE,
-  CUBE,
+  I_CIRC,
+  I_CIRC_MAJ,
   EURO,
   BAHT,
   COPYRIGHT,
@@ -59,8 +59,8 @@ const uint32_t PROGMEM unicode_map[] = {
   [A_GRV_MAJ] = 0x00C0,  // 11 À
   [C_CEDILLE]  = 0x00E7,  // 12 ç
   [C_CEDILLE_MAJ] = 0x00C7,  // 13 Ç
-  [CARRE]  = 0x00B2,  // 14 ²
-  [CUBE] = 0x00B3,  // 15 ³
+  [I_CIRC]  = 0x00EE,  // 14 î
+  [I_CIRC_MAJ] = 0x00CE,  // 15 Î
   [EURO]  = 0x20AC,  // 16 €
   [BAHT] = 0x0E3F,  // 17 ฿
   [COPYRIGHT]  = 0x00A9,  // 18 ©
@@ -88,6 +88,14 @@ const uint32_t PROGMEM unicode_map[] = {
   [INFINIT] = 0x221E,  // 40 ∞
 };
 
+//Tap Dance Definitions
+qk_tap_dance_action_t tap_dance_actions[] = {
+  //Tap once for Esc, twice for Caps Lock
+  [GAMING]  = ACTION_TAP_DANCE_DUAL_ROLE(KC_MPLY, 1),
+  [DEFAULT]  = ACTION_TAP_DANCE_DUAL_ROLE(KC_MPLY, 0),
+// Other declarations would go here, separated by commas, if you have them
+};
+
 uint16_t gui_timer = 0;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -103,8 +111,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 register_code(keycode);
                 unregister_code(keycode);
                 unregister_mods(MOD_BIT(KC_LSFT));
-                layer_on(1);
-                set_oneshot_layer(1, ONESHOT_START);
+                layer_on(2);
+                set_oneshot_layer(2, ONESHOT_START);
                 clear_oneshot_layer_state(ONESHOT_PRESSED);
             }
         }

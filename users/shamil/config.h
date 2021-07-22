@@ -15,3 +15,9 @@ enum custom_keycodes {
   UTWO,
   CONE,
 };
+
+//Tap Dance Declarations
+enum {
+  GAMING = 1,
+  DEFAULT = 2,
+};
