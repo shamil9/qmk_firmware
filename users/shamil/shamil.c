@@ -105,7 +105,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             register_mods(MOD_BIT(KC_LSFT));
             gui_timer = timer_read();
         } else {
-            if (timer_elapsed (gui_timer) > TAPPING_TERM) {
+            if (timer_elapsed(gui_timer) > TAPPING_TERM * 0.5) {
                 unregister_mods(MOD_BIT(KC_LSFT));
             } else {
                 register_code(keycode);
