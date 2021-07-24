@@ -3,22 +3,3 @@
 #define PERMISSIVE_HOLD
 #define TAPPING_TERM 200
 
-enum custom_keycodes {
-  RARW,
-  LARW,
-  RARWF,
-  EONE,
-  ETWO,
-  ETHREE,
-  AONE,
-  ATWO,
-  UONE,
-  UTWO,
-  CONE,
-};
-
-//Tap Dance Declarations
-enum {
-  GAMING = 1,
-  DEFAULT = 2,
-};
