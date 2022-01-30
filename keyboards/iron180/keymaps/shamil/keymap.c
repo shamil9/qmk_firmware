@@ -36,9 +36,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL, KC_LWIN, KC_LALT,                            KC_SPC ,                            KC_RWIN, KC_RWIN, KC_RCTL, TO(0),             KC_LEFT, KC_DOWN, KC_RGHT
     ),
     [2] = LAYOUT_all(
-        RESET,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______,
+        KC_TRNS,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        UC_MOD,  KC_TRNS, KC_TRNS, X(0),    X(2),    X(4),    KC_TRNS, X(24),   X(14),   X(22),   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS,
+        UC_MOD,  KC_TRNS, KC_TRNS, X(0),    X(2),    X(4),    KC_TRNS, X(24),   X(14),   X(22),   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          RESET,   KC_TRNS, KC_TRNS,
         KC_TRNS, X(10),   KC_TRNS, KC_BSPC, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT,KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, X(12),   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RARW,    RARWF,   KC_RSFT, KC_TRNS,                   KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS,                            KC_TRNS,                            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_MPRV, KC_TRNS, KC_MNXT
