@@ -118,6 +118,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 
+        case WIN_LAYOUT:
+            if (record->event.pressed) {
+                set_unicode_input_mode(UC_WINC);
+                layer_off(0);
+                layer_on(1);
+            }
+            break;
+
+        case MAC_LAYOUT:
+            if (record->event.pressed) {
+                set_unicode_input_mode(UC_MAC);
+                layer_off(1);
+                layer_on(0);
+            }
+            break;
+
         case RARW:
             if (record->event.pressed) {
                 SEND_STRING("->");

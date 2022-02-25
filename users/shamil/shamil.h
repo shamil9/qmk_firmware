@@ -5,7 +5,7 @@
 #define QMK_KEYS_PER_SCAN 12
 
 #undef DEBOUNCE
-#define DEBOUNCE 5
+#define DEBOUNCE 8
 
 #include "quantum.h"
 
@@ -21,6 +21,8 @@ enum custom_keycodes {
   UONE,
   UTWO,
   CONE,
+  WIN_LAYOUT,
+  MAC_LAYOUT,
 };
 
 //Tap Dance Declarations
