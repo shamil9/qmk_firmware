@@ -24,18 +24,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC,          KC_BSPC,
  LCTL_T(KC_ESC), KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,                   KC_ENT,
 		KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_LSFT,          KC_MPLY,
-		KC_LCTL, KC_LGUI,                   KC_LALT, LT(2, KC_SPACE),  LT(2, KC_SPACE),  KC_RALT,                   KC_RGUI, KC_RCTL, TO(1)
+		KC_LCTL, KC_LALT,                   KC_LGUI, LT(2, KC_SPACE),  LT(2, KC_SPACE),  KC_RALT,                   KC_RGUI, KC_RCTL, WIN_LAYOUT
     ),
     [1] = LAYOUT_split_bs_rshift(
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,                   _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
-        MO(2),   _______,                   _______, KC_SPACE,         KC_SPACE,         _______,                   _______, _______, TO(0)
+        MO(2),   KC_LGUI,                   KC_LALT, KC_SPACE,         KC_SPACE,         _______,                   _______, _______, MAC_LAYOUT
     ),
     [2] = LAYOUT_split_bs_rshift(
         _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, _______,
-        UC_MOD,  _______, _______, X(0),    X(2),    X(4),    _______, X(24),   X(14),   X(22),   _______, KC_MPRV, KC_MNXT,          KC_DEL,
+        _______, _______, _______, X(0),    X(2),    X(4),    _______, X(24),   X(14),   X(22),   _______, KC_MPRV, KC_MNXT,          KC_DEL,
         _______, X(10),   _______, KC_BSPC, _______, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______,                   _______,
         _______, _______, _______, X(12),   _______, _______, _______, _______, _______, _______, LARW,    RARW,    RARWF,            RESET,
         _______, _______,                   _______, _______,          _______,          _______,                   _______, _______, _______
