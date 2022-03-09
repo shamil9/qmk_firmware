@@ -96,6 +96,10 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 // Other declarations would go here, separated by commas, if you have them
 };
 
+void keyboard_post_init_user(void) {
+    set_unicode_input_mode(UC_MAC);
+}
+
 uint16_t gui_timer = 0;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
