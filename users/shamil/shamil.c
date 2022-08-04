@@ -155,6 +155,54 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING("<-");
             }
             break;
+
+        case EONE:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LALT("e")"e");
+            }
+          break;
+
+        case ETWO:
+            if (record->event.pressed) {
+               SEND_STRING(SS_LALT("`")"e");
+            }
+            break;
+
+        case ETHREE:
+            if (record->event.pressed) {
+               SEND_STRING(SS_LALT("6")"e");
+            }
+            break;
+
+        case IONE:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LALT("6")"a");
+            }
+            break;
+
+        case ATWO:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LALT("`")"a");
+            }
+            break;
+
+        case CONE:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LALT("c")"c");
+            }
+            break;
+
+        case UONE:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LALT("`")"u");
+            }
+            break;
+
+        case OONE:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LALT("6")"u");
+            }
+            break;
     }
 
     return true;
