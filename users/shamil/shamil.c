@@ -91,8 +91,8 @@ const uint32_t PROGMEM unicode_map[] = {
 //Tap Dance Definitions
 qk_tap_dance_action_t tap_dance_actions[] = {
   //Tap once for Esc, twice for Caps Lock
-  [GAMING]  = ACTION_TAP_DANCE_DUAL_ROLE(KC_MPLY, 1),
-  [DEFAULT]  = ACTION_TAP_DANCE_DUAL_ROLE(KC_MPLY, 0),
+  [GAMING]  = ACTION_TAP_DANCE_DOUBLE(KC_MPLY, 1),
+  [DEFAULT]  = ACTION_TAP_DANCE_DOUBLE(KC_MPLY, 0),
 // Other declarations would go here, separated by commas, if you have them
 };
 
