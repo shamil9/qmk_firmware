@@ -36,8 +36,16 @@ LCTL_T(KC_ESC),  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    
     [2] = LAYOUT_all(
         KC_TRNS, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,    _______,    _______,                 _______, _______, RGB_TOG,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,       KC_DEL,   KC_TRNS, KC_TRNS, KC_TRNS,
-        UC_MOD,  KC_TRNS, KC_TRNS, X(0),    X(2),    X(4),    KC_TRNS, X(24),   X(14),   X(22),   KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,                 RESET,   KC_TRNS, KC_TRNS,
-        KC_TRNS, X(10),   KC_TRNS, KC_BSPC, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT,KC_TRNS, KC_TRNS,                KC_TRNS,
-        KC_TRNS, KC_NO,   KC_TRNS, KC_TRNS, X(12),   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RARWF,      KC_LSFT,    KC_RSFT,                          KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,                 RESET,   KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_BSPC, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT,KC_TRNS, KC_TRNS,                KC_TRNS,
+        KC_TRNS, KC_NO,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RARWF,      KC_LSFT,    KC_RSFT,                          KC_TRNS,
         KC_TRNS, KC_NO,   KC_TRNS,                   KC_TRNS,                   KC_TRNS, KC_NO,   KC_NO,   KC_TRNS,                                         KC_MPRV, KC_TRNS, KC_MNXT),
+
+    [3] = LAYOUT_all(
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,                 KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,       KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, X(0),    X(2),    X(4),    KC_TRNS, X(24),   X(14),   X(22),   KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,                 KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, X(10),   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                KC_TRNS,
+        KC_TRNS, KC_NO,   KC_TRNS, KC_TRNS, X(12),   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,                          KC_TRNS,
+        KC_TRNS, KC_NO,   KC_TRNS,                   KC_TRNS,                   KC_TRNS, KC_NO,   KC_NO,   KC_TRNS,                                         KC_TRNS, KC_TRNS, KC_TRNS),
 };
