@@ -115,8 +115,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     register_code(keycode);
                     unregister_code(keycode);
                     unregister_mods(MOD_BIT(KC_LSFT));
-                    layer_on(2);
-                    set_oneshot_layer(2, ONESHOT_START);
+                    layer_on(3);
+                    set_oneshot_layer(3, ONESHOT_START);
                     clear_oneshot_layer_state(ONESHOT_PRESSED);
                 }
             }
