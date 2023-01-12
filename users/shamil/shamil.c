@@ -97,7 +97,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 };
 
 void keyboard_post_init_user(void) {
-    set_unicode_input_mode(UC_MAC);
+    set_unicode_input_mode(UNICODE_MODE_MACOS);
 }
 
 uint16_t gui_timer = 0;
@@ -124,7 +124,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         case WIN_LAYOUT:
             if (record->event.pressed) {
-                set_unicode_input_mode(UC_WINC);
+                set_unicode_input_mode(UNICODE_MODE_WINCOMPOSE);
                 layer_off(0);
                 layer_on(1);
             }
@@ -132,7 +132,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         case MAC_LAYOUT:
             if (record->event.pressed) {
-                set_unicode_input_mode(UC_MAC);
+                set_unicode_input_mode(UNICODE_MODE_MACOS);
                 layer_off(1);
                 layer_on(0);
             }
