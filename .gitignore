@@ -26,7 +26,7 @@ api_data/v1
 quantum/version.h
 *.eep
 *.qmk
-*.uf2
+
 
 # Old-style QMK Makefiles
 /keyboards/**/Makefile
