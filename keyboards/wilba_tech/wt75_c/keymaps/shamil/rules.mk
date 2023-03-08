@@ -1,1 +1,1 @@
-#DEBOUNCE_TYPE = sym_eager_pk
+DEBOUNCE_TYPE = sym_defer_pr

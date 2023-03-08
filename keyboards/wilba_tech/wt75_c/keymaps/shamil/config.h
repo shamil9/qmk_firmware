@@ -1,2 +1,2 @@
 #undef DEBOUNCE
-#define DEBOUNCE 12
+#define DEBOUNCE 15
